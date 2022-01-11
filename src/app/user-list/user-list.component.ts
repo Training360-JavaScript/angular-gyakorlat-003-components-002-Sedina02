@@ -15,7 +15,6 @@ export class UserListComponent implements OnInit {
    * @default []
    */
   @Input() users: User[] = [];
-  
   @Output() delUser: EventEmitter<User> = new EventEmitter();
   currentUser: User = new User();
 
@@ -33,7 +32,7 @@ export class UserListComponent implements OnInit {
    * @returns {void}
    */
   onSelectUser(user: User): void {
-    user = this.currentUser;
+    this.currentUser = user;
   }
 
   /**
